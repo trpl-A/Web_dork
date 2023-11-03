@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- started: 11/05/23 -->
+    <!-- updated: 03/11/23 -->
+    <title>DORK</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="icon" href="./styles/favicon/favicon.png">
+    <base target="_blank">
+
+
+    <!-- fonts -->
+    <!-- font1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+
+    <!-- font2 -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&display=swap" rel="stylesheet"> -->
+
+
+    <!-- my-style -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/common.css">
+
+    <!-- sass -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- animate -->
+    <link rel="stylesheet" href="./styles/animate-header.css">
+
+    <!-- my-script -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/typing.js"></script>
+
+</head>
+
+<body onload="writeLine()">
+    <!-- ======================================= -->
+    <!-- history, hidden -->
+    <div id="for-history">
+        <div id="search-history"></div>
+
+        <div class="center">
+            <button class="btn-close" onclick="hide('for-history')">Close</button>
+        </div>
+    </div>
+
+    <!-- music, hidden -->
+    <div id="for-music">
+        <!-- audio -->
+        <div id="audio-box" class="center">
+            <audio src="./sounds/The Encounter -  Astrid, feat Street Cleaner.mp3" autoplay loop
+                controls="true"></audio>
+            <!-- <audio type="audio/mp3" src="./sounds/The Encounter -  Astrid, feat Street Cleaner.mp3" loop autoplay></audio> -->
+        </div>
+
+        <div class="center">
+            <button class="btn-close" onclick="hide('for-music')">Close</button>
+        </div>
+    </div>
+    <!-- ======================================= -->
+
+
+    <!-- COVER -->
+    <header class="center">
+        <!-- SEARCHBAR -->
+        <div>
+            <input id="search-box" type="text">
+            <script>
+                const textbox = document.getElementById("search-box");
+                textbox.addEventListener("keydown", function onEvent(event) {
+                    if (event.key === "Enter") {
+                        search()
+                    }
+                });
+            </script>
+
+            <div id="guidance"></div>
+        </div>
+    </header>
+
+    <!-- ======================================= -->
+    <!-- HIDDEN -->
+    <main>
+        <!-- common commands -->
+        <section id="common" class="hidden">
+            <h2>Common searches</h2>
+
+            <ul>
+                <li>
+                    <a
+                        href="https://www.google.com/search?q=intitle%3Aindex+of&sca_esv=579077719&ei=m7FEZeC0MeiAhbIPhr-LiAg&ved=0ahUKEwig7t74tqeCAxVoQEEAHYbfAoEQ4dUDCBA&uact=5&oq=intitle%3Aindex+of&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGludGl0bGU6aW5kZXggb2ZI1BVQjwVY5xJwAXgBkAEAmAHfAaABvAOqAQMyLTK4AQPIAQD4AQHCAgoQABhHGNYEGLAD4gMEGAAgQYgGAZAGCA&sclient=gws-wiz-serp">
+                        intitle:"index of"
+                    </a>
+                </li>
+            </ul>
+
+            <div class="center">
+                <button class="btn-close" onclick="hide('common')">Close</button>
+            </div>
+        </section>
+
+        <!-- keywords-->
+        <section id="keywords" class="hidden">
+            <h2>Google search keywords</h2>
+
+            <p class="notes">a colon after the keyword can also be used</p>
+            <p class="notes">use quotes when searching</p>
+
+            <ul>
+                <li>
+                    <i>site:</i>youtube.com
+                </li>
+                <li>
+                    <i>inurl:</i>computer
+                </li>
+                <li>
+                    <i>intitle:</i>compute
+                </li>
+                <li>
+                    <i>intext:</i>compile
+                </li>
+                <li>
+                    <i>allintitle:</i>computing
+                </li>
+                <li>
+                    <i>related:</i>hitman
+                </li>
+                <li>
+                    <i>filetype:</i>xml || <i>ext:</i>xml
+                </li>
+
+                <li>
+                    <i>('-' before prompt/ command) omits (eg. -site)</i>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <p>" "</p>
+                </li>
+                <li>
+                    <p>*</p>
+                </li>
+                <li>
+                    <p>'( )'</p>
+                </li>
+                <li>
+                    <p>OR or |</p>
+                </li>
+                <li>
+                    <p>AND</p>
+                </li>
+            </ul>
+
+            <div class="center">
+                <button class="btn-close" onclick="hide('keywords')">Close</button>
+            </div>
+        </section>
+
+        <!-- google utilities -->
+        <section id="utility" class="hidden">
+            <h2>Google utility keywords</h2>
+            <ul>
+                <li>
+                    <i>define:</i>hacking
+                </li>
+                <li>
+                    <p><i>movie:</i>Run</p>
+                </li>
+                <li>
+                    <p><i>before:</i>2000</p>
+                </li>
+                <li>
+                    <p><i>after:</i>2023</p>
+                </li>
+                <li>
+                    <p><i>weather:</i>Egypt</p>
+                </li>
+                <li>
+                    <p><i>map:</i>Westminster</p>
+                </li>
+                <li>
+                    <p>timer</p>
+                </li>
+                <li>
+                    <p><i>time</i> Antartica</p>
+                </li>
+                <li>
+                    <p>{word} in {language}</p>
+                </li>
+
+                <li>
+                    <p>(mathematical expressions/ equations)</p>
+                </li>
+            </ul>
+
+            <div class="center">
+                <button class="btn-close" onclick="hide('utility')">Close</button>
+            </div>
+        </section>
+    </main>
+    <!-- ======================================= -->
+
+    <!-- MAIN MENU -->
+    <section id="menu" class="center">
+        <div>
+            <button id="btn-search" onclick="show('common')">C</button>
+            <button id="btn-cls" onclick="show('keywords')">K</button>
+            <button id="btn-root" onclick="show('utility')">U</button>
+        </div>
+    </section>
+
+
+    <!-- LINKS -->
+    <!-- <div class="overlay"></div> -->
+    <section id="links" class="center">
+        <div id="glowing">
+            <h2>Useful links</h2>
+            <ul>
+                <li>
+                    <a href="https://www.exploit-db.com/google-hacking-database">
+                        DB
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.adfreak.de/en/blog/google-hacks-search-commands-all-hacks-for-google-explained-simply/">
+                        Google search commands
+                    </a>
+                </li>
+                <li>
+                    <a href="https://securitytrails.com/blog/google-hacking-techniques">
+                        Google hacking techniques
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=hrVa_dhD-iA&pp=ygUMZ29vZ2xlIGRvcmtz">
+                        Video
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

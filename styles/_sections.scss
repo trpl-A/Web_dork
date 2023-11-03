@@ -1,0 +1,88 @@
+// close btn
+.btn-close {
+    margin-top: 2vh;
+}
+
+.btn-close:hover {
+    color: white;
+    background-color: red;
+}
+
+
+// MENU section
+#menu {
+
+    /* buttons */
+    button {
+        font-size: 20px;
+    }
+
+    /* btn1 */
+    #btn-search {
+        background-color: white;
+    }
+
+    #btn-search:hover,
+    #btn-search:focus {
+        background-color: rgb(24, 23, 23);
+    }
+
+    /* btn2 */
+    #btn-cls {
+        background-color: red;
+    }
+
+    #btn-cls:focus,
+    #btn-cls:hover {
+        background-color: yellow;
+    }
+
+    /* btn3 */
+    #btn-root {
+        background-color: rgb(5, 219, 5);
+    }
+
+    #btn-root:focus,
+    #btn-root:hover {
+        background-color: blue;
+    }
+}
+
+// MORE_KEYWORD section
+#keywords {
+    .notes {
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+
+    // ul {
+    //     list-style: circle;
+    //     // font-size: 14px;
+    // }
+}
+
+// LINKS section
+#links {
+    background-image: url("./images/bg.png");
+    background-blend-mode: darken;
+    // background-blend-mode: screen;
+    background-color: rgb(53, 0, 39);
+    color: white;
+    position: relative;
+
+    #glowing {
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px;
+        transition: 200ms ease-in;
+
+        ul {
+            // font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+        }
+    }
+
+    #glowing:hover {
+        box-shadow: 2px 2px 20px rgb(179, 2, 135);
+    }
+}

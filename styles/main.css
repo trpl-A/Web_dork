@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    transition: 400ms ease;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    /* background-color: rgb(0, 0, 36); */
+    scroll-behavior: smooth;
+}
+
+header,
+section {
+    width: 100vw;
+    height: 100vh;
+    /* min-height: 100vh; */
+    padding: 10px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    color: yellow;
+    transition: 250ms;
+}
+
+a:hover {
+    color: white;
+}

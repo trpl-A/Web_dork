@@ -1,0 +1,46 @@
+#for-history {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+
+    background-color: black;
+    color: white;
+}
+
+
+#for-music {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+
+    background-color: black;
+    color: white;
+
+    #audio-box {
+        height: 50vh;
+        margin: 2vh;
+        padding: 10px;
+
+        audio {
+            background-color: whitesmoke;
+            // border: 4px solid olive;
+            // box-shadow: 10px 10px 1px olive;
+            box-shadow: 1px 1px 20px olive;
+
+            margin: 10px;
+            padding: 10px;
+            border-radius: 25px;
+            display: block;
+        }
+    }
+}

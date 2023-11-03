@@ -1,0 +1,29 @@
+/* SECTIONS */
+section {
+    background-color: black;
+    color: white;
+
+    h2 {
+        font-weight: 100;
+        font-size: 35px;
+        padding: 10px 0;
+    }
+
+    ul {
+        /* list-style: none; */
+        list-style: outside;
+        line-height: 1.2rem;
+        font-size: 18px;
+        padding: 10px 15px;
+
+        li {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        i {
+            color: yellow;
+            font-style: normal;
+        }
+    }
+}
